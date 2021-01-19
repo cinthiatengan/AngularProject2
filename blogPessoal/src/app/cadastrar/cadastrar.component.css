@@ -1,0 +1,10 @@
+#img-bg{
+    background-image: url('https://live.staticflickr.com/65535/50850833876_add408568d_k.jpg');
+    
+    min-height:695px;
+    
+    background-position:center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+    }
