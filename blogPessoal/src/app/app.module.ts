@@ -1,3 +1,4 @@
+import {HttpClientModule} from '@angular/common/http'
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
@@ -19,6 +20,7 @@ import { CadastrarComponent } from './cadastrar/cadastrar.component';
   imports: [
     BrowserModule,
     AppRoutingModule
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
