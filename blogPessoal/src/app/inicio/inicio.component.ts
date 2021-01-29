@@ -15,12 +15,15 @@ import { TemaService } from '../service/tema.service';
 export class InicioComponent implements OnInit {
 
   postagem: Postagem = new Postagem()
+  listaPostagens: Postagem[]
 
   tema: Tema = new Tema()
   listaTemas: Tema[]
   idTema: number
+
   user: User = new User()
   idUser = environment.id
+
 
   constructor(
     private router: Router,
@@ -35,6 +38,7 @@ export class InicioComponent implements OnInit {
       this.router.navigate(['/entrar'])
     }
     this.getAllTemas()
+    this.getAllPostagens()
   }
 
   getAllTemas(){
@@ -45,6 +49,11 @@ export class InicioComponent implements OnInit {
   findByIdTema(){
     this.temaService.getByIdTema(this.idTema).subscribe((resp: Tema)=>{
       this.tema = resp
+    })
+  }
+  getAllPostagens(){
+    this.postagemService.getAllPostagens().subscribe((resp: Postagem[])=>{
+      this.listaPostagens = resp
     })
   }
 
@@ -59,6 +68,7 @@ export class InicioComponent implements OnInit {
       this.postagem = resp
       alert('Postagem realizada com sucesso!')
       this.postagem = new Postagem()
+      this.getAllPostagens()
     })
 
   }
