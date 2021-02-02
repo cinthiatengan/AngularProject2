@@ -13,3 +13,6 @@ Tema page:
 ***
 Cadastro page:
 ![image4](https://i.imgur.com/EtIujrM.png)
+
+***
+Further implementation focused on funcionability of routes and buttons
